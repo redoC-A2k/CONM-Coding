@@ -1,0 +1,9 @@
+read(b,g(x),E)
+m=g(b)
+i=1 
+While (|b-m|>= E ) do 
+  Print i,  b, m ,abs(m-b) 
+  b=m 
+  m=g(b) 
+  i=i+1 
+Print i, b, m, abs(m-b) 

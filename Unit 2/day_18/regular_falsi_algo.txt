@@ -1,0 +1,17 @@
+Algorithm Regula Falsi Method 
+
+Read a, b, E(default=0.0001),f(x)
+If f(a).f(b) < 0 :
+  m = [a.f(a)-b.f(b) ] / [ f(b)-f(a) ] 
+  i=1 
+  While (|f(m)|>= E ):
+    Print i, a, b, m ,f(m) 
+    If (f(a).f(m)>0): 
+      a=m 
+    Else: 
+      b=m 
+    m = [a.f(a)-b.f(b) ] / [ f(b)-f(a) ] 
+    i=i+1 
+  Print i, a, b, m, f(m) 
+Else:
+  print("Enter value of a and b such that f(a)*f(b)<0")

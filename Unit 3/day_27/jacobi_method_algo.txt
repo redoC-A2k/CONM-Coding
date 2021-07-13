@@ -1,0 +1,32 @@
+for i=0 to i=n:
+  for j=0 to j=n:
+    read(matrix[i][j])
+
+read(max_itr) //value of maximum iterations
+read(Error) //value of maximum permissible error
+
+old_x=[]
+for i=0 to i=n:
+  read(x) //initial guess
+  old_x.append(x)
+
+big_Error=0
+for k=1 to k=max_itr+1:
+  new_x=[]
+  rel_Error = 0
+  big_Error = 0
+  for i=0 to i=n:
+    sum = 0
+    for j=0 to j=n:
+      if i!=j:
+        sum = sum + matrix[i][j]*old_x[j]
+
+    new_x.append(matrix[i][n]-sum/matrix[i][i])
+    try:
+      rel_Error = abs((new_x[i] - old_x[i])/new_x[i])
+    exception:
+      print("Error")
+      rel_Error = 0
+      
+  if big_Error <= Error:
+    print("Solutioin is convergent in ",k,"iterations")

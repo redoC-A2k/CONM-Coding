@@ -1,0 +1,16 @@
+Read a,b,E=0.0001(Default),f(x)
+if f(a)*f(b)<0:
+  m=(a+b)/2
+  i=1
+  while(|f(m)|>=E):
+    print(i,a,b,m,f(m))
+    if f(a)*f(m)>0:
+      a=m
+    else:
+      b=m
+    m=(a+b)/2
+    i+=1
+  print(i,a,b,m,f(m))
+
+else:
+  print("Enter value of a and b such that f(a)*f(b)<0")

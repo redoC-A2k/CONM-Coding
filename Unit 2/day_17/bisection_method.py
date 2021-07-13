@@ -10,7 +10,6 @@ else :
 #print(E)    
 
 def f(x):
-    x=x
     return eval(fx)
 
 if f(a)*f(b)<0:

@@ -1,0 +1,12 @@
+read(x_arr[],y_arr[],x,n)
+
+i=0
+result = 0
+while i<n:
+  numerator=Π(x-x_arr[j]) {j∈ 0-n but j!=i }
+  denominator=Π(x_arr[i]-x_arr[j]) {j∈ 0-n but j!=i }
+  number = numerator/denominator
+  number *= y_arr[i]
+  result+=num
+  
+print(result)

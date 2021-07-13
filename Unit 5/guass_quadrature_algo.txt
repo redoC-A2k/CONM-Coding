@@ -1,0 +1,17 @@
+read (a,b,n,fx)
+
+p=(a+b)/2
+q=(a-b)/2
+
+guass_points_coeff_weights = {
+1: {...},
+2: {...},
+3: {...},
+...
+}
+
+integral = 0
+for i=0 to i=n:
+  integral+= wi*f(xi)
+
+print(integral)

@@ -12,7 +12,6 @@ else:
 
 
 def f(x):
-    x = x
     return eval(fx)
 
 

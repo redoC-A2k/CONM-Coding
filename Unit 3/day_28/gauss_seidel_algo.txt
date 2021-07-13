@@ -1,0 +1,34 @@
+read(n)
+matrix=[]
+for i=0 to i=n:
+  for j=0 to j=n+1:
+    read(matrix[i][j])
+
+read(max_itr,E)
+
+x=[]
+for i=0 to i=n:
+  x.append(0.0)
+
+for k=1 to k=max_itr+1:
+  big_E = 0
+  for i=0 to i=n:
+    sum=0
+    for j in range(n):
+      if i!=j:
+        sum += matrix[i][j]*x[j]
+    temp = (matrix[i][n]-sum)/matrix[i][i]
+    rel_error = abs((temp-x[i])/temp)
+    x[i]=temp
+
+    if rel_error>big_E:
+      big_E = rel_error
+
+  for i=0 to i=n:
+    print(x[i])
+
+  if big_E<=e:
+    print("Solution converges in",k,"iterations")
+
+
+

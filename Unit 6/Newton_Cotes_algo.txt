@@ -1,0 +1,23 @@
+read(n,a,b,s,fx)
+h=(b-a)/s
+
+calculated_integrated_u_as_n_arr = [] //
+i=1
+while true:
+  num=1
+  for j=1 to j=i in steps of 1:
+    num*=(u-(i-1))
+
+  each_integrated_u_as_n = integrate(0-n){num}
+  if(each_integrated_u_as_n == 0):
+    break
+  each_integrated_u_as_n = each_integrated_u_as_n / i!
+  calculated_integrated_u_as_n_arr.append(each_integrated_u_as_n)
+  i+=1
+
+result = 0
+for i=0 to i=s in steps of n:
+  each_result = 0 
+  for counter,each_calculated_integral in calculated_integrated_u_as_n_arr:
+    each_result+=each_calculated_integral * ∆(counter){f(a+counter*h)}
+  print(result)

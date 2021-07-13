@@ -1,0 +1,9 @@
+read (b,f(x),E)
+m =b-f(b)/f'(b) 
+i=1 
+While (|f(m)|>= E ) do 
+	Print i,  b, m ,f(m) 
+	b=m 
+	m =b-f(b)/f'(b) 
+	i=i+1 
+Print i, b, m, f(m) 
